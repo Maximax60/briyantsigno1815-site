@@ -1,0 +1,47 @@
+// pages/_app.jsx
+import "@/styles/globals.css";
+import Head from "next/head";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+const SITE_NAME = "Briyant Solèy Signo 1815";
+const SITE_URL = "https://briyantsoleysigno1815.com";
+const SITE_DESC = "Sit ofisyèl BSS 1815 — mizik, videyo, ak nouvèl.";
+
+export default function App({ Component, pageProps }) {
+  return (
+    <div className="min-h-screen flex flex-col bg-white text-black">
+      <Head>
+        {/* Basic */}
+        <title>{SITE_NAME}</title>
+        <meta name="description" content={SITE_DESC} />
+        <link rel="icon" href="/favicon.ico" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content={SITE_NAME} />
+        <meta property="og:description" content={SITE_DESC} />
+        <meta property="og:url" content={SITE_URL} />
+        <meta property="og:image" content={`${SITE_URL}/og-bss.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={SITE_NAME} />
+        <meta name="twitter:description" content={SITE_DESC} />
+        <meta name="twitter:image" content={`${SITE_URL}/og-bss.jpg`} />
+
+        {/* PWA-ish niceties */}
+        <meta name="theme-color" content="#FFB267" />
+      </Head>
+
+      <Header />
+      <main className="flex-1">
+        <Component {...pageProps} />
+      </main>
+      <Footer />
+    </div>
+  );
+}
