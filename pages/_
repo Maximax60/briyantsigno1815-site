@@ -1,0 +1,26 @@
+import Head from "next/head";
+
+export default function MusicPage() {
+  const TITLE = "Mizik Ofisyèl — BSS 1815";
+  const DESC = "Tande 3 mizik cho BSS 1815 sou sit la. Koute, pataje, soutni bann lan.";
+  const URL = "https://briyantsoleysigno1815.com/mizik";
+  const IMG = "https://briyantsoleysigno1815.com/og-bss.jpg";
+
+  return (
+    <>
+      <Head>
+        <title>{TITLE}</title>
+        <meta name="description" content={DESC} />
+        <meta property="og:title" content={TITLE} />
+        <meta property="og:description" content={DESC} />
+        <meta property="og:url" content={URL} />
+        <meta property="og:image" content={IMG} />
+        <meta name="twitter:title" content={TITLE} />
+        <meta name="twitter:description" content={DESC} />
+        <meta name="twitter:image" content={IMG} />
+      </Head>
+
+      {/* ...existing music grid JSX */}
+    </>
+  );
+}
