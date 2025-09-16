@@ -1,8 +1,0 @@
-export default function Home() {
-  return (
-    <div style={{ textAlign: 'center', paddingTop: '50px' }}>
-      <h1>BRIYANT SOLÈY SIGNO 1815</h1>
-      <p>Byenveni sou sit ofisyèl nou an!</p>
-    </div>
-  );
-}
